@@ -1,3 +1,5 @@
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/colormono/kinect-notes/master?grs=github&t=white)
+
 ![COVER](assets/2017-mm-curso-kinect-facebook.jpg)
 
 ## Enlaces
@@ -9,10 +11,11 @@
 - [OpenKinect for Processing](https://github.com/shiffman/OpenKinect-for-Processing)
 - [OpenFrameworks](http://openframeworks.cc/)
 
+---
 
 ## MIT License
 
-Copyright (c) 2016 David Russell
+Copyright (c) 2017 Mariano Rivas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
