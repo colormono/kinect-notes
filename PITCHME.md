@@ -59,15 +59,15 @@ Video de ejemplo Kinect
 
 ### v1
 
-![Kinect componentes](assets/images/kinect-interior.png)
-Salió a finales de 2010. 
-La profundidad de captura va de **0.5** a **4.5 metros**.
+![Kinect componentes](assets/images/kinect-interior.png)<br>
+Salió a finales de 2010.<br>
+La profundidad de captura va de **0.5** a **4.5 metros**.<br>
 Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x240** para el D.
 
 +++
 
 #### Requerimientos
-![Kinect adaptador v1](assets/images/adaptador-v1.jpg)
+![Kinect adaptador v1](assets/images/adaptador-v1.jpg)<br>
 - Modelos compatibles: 1414 y 1473 __(este último trae algunos bugs)__
 - Necesita un adaptador especial
 - Se puede usar con Win, Mac y Linux
@@ -77,15 +77,15 @@ Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x
 
 ### v2
 
-![Kinect one for XBox](assets/images/kinect-one.png)
-Salió a finales de 2013. La profundidad de captura es igual.
-Envía data a **30 FPS** con una resolución de **1920x1080** para el RGB y **512x424** para el D.
+![Kinect one for XBox](assets/images/kinect-one.png)<br>
+Salió a finales de 2013. La profundidad de captura es igual.<br>
+Envía data a **30 FPS** con una resolución de **1920x1080** para el RGB y **512x424** para el D.<br>
 Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 
 +++
 
 #### Requerimientos
-![Kinect adaptador v2](assets/images/adaptador-v2-alt.jpg)
+![Kinect adaptador v2](assets/images/adaptador-v2-alt.jpg)<br>
 - Necesita un adaptador MUY especial __(no hay chinos)__
 - Se puede usar con Win __(W8 64 bit)__ y Mac __(OSx >= 10.9 y sin análisis de imagen)__
 - USB 3.0
@@ -94,8 +94,8 @@ Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 
 #### Drivers
 
-![Open Kinect](assets/images/logo-openkinect.png)
-[https://openkinect.org](https://openkinect.org)
+![Open Kinect](assets/images/logo-openkinect.png)<br>
+[https://openkinect.org](https://openkinect.org)<br>
 __RGB e imágen de profundidad (Depth), Motor, Acelerómetro, LED, Audio__
 
 ##### v1: [https://github.com/OpenKinect/libfreenect](https://github.com/OpenKinect/libfreenect)
