@@ -298,4 +298,5 @@ body {
 .reveal section img {
   border: 0;
   box-shadow: none;
+  max-height: 33vh;
 }

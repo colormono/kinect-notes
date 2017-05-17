@@ -106,13 +106,13 @@ __RGB e imágen de profundidad (Depth), Motor, Acelerómetro, LED, Audio__
 ---
 
 ## Processing
-![Processing3](assets/images/processing3-logo.png)
+![Processing3](assets/images/processing3-logo.png)<br>
 [http://processing.org/](http://processing.org/)
 
 +++
 
 ### Open Kinect for Processing
-![Open Kinect for Processing](assets/images/openkinect.jpg)
+![Open Kinect for Processing](assets/images/openkinect.jpg)<br>
 https://github.com/shiffman/OpenKinect-for-Processing
 
 +++
@@ -125,8 +125,8 @@ https://github.com/wexstorm/simple-openni
 +++
 
 ### Kinect v2 for Processing
-![Kinect v2 for Processing](assets/images/openkinect.jpg)
-Se necesita correr desde Windows.
+![Kinect v2 for Processing](assets/images/openkinect.jpg)<br>
+Se necesita correr desde Windows.<br>
 Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esqueleto entre otras cosas.
 
 
@@ -154,7 +154,7 @@ Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esquel
 ---
 
 ## OpenFrameworks
-![OpenFrameworks](assets/images/of-logo.png)
+![OpenFrameworks](assets/images/of-logo.png)<br>
 [http://openframeworks.cc/](http://openframeworks.cc/)
 
 +++
@@ -167,9 +167,9 @@ Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esquel
 
 ---
 
-`brew install libfreenect`
-Una vez instalada la librería conectamos la cámara a la corriente y luego al puerto USB y ejecutamos:
-`freenect-glview`
+`brew install libfreenect`<br>
+Una vez instalada la librería conectamos la cámara a la corriente y luego al puerto USB y ejecutamos:<br>
+`freenect-glview`<br>
 Listo, la cámara está corriendo y  deberías estar viendo una imagen como la siguiente.
 
 <small>
@@ -201,8 +201,8 @@ Listo, la cámara está corriendo y  deberías estar viendo una imagen como la s
 
 ## Gracias
 
-Mariano Rivas
-<span style="color: gray">colormono@gmail.com</span>
+Mariano Rivas<br>
+<span style="color: gray">colormono@gmail.com</span><br>
 <span style="color: gray">https://github.com/colormono/kinect-notes</span>
 
 +++
