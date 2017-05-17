@@ -1,89 +1,177 @@
 ![Kinect](assets/images/kinectp-640x353.jpg)
 # Apuntes Kinect
 
+
 ---
 
-### Encuentro 1
+## Encuentro 1
 
 +++ 
 
-- Presentación
-    - Instructor
-    - Participantes (Nombre, De dónde venís? Por qué estás acá?)
+### Intro
+- Mariano
+- Participantes <br><small style="color:gray;">(Nombre, De dónde venís? Por qué estás acá?)</small>
 
 +++
 
-- Kinect
-    - Presentación del sensor
-    - Drivers
-    - Instalación (Windows, Linux, OSx)
+### Hardware
+- v1
+    - Características
+    - Requerimientos
+- v2 __(one for XBox)__
+    - Características
+    - Requerimientos
+- Drivers e Instalación
 
 +++
 
+### Software
+- Processing
 - Librerías
-    - Libfreekinect
+    - Open Kinect
     - SimpleOpenNI
 
 +++
 
-- Processing
-    - Cámara RGB
-    - Imagen infrarroja
-    - Mapa e imagen de profundidad
-    - Nube de puntos
+### Code
+- Cámara RGB
+- Imagen infrarroja
+- Mapa e imagen de profundidad
+- Nube de puntos
 
 +++
 
-- Ejemplos
-    - RGBD
+### Casos
+- RGBD
+
 
 ---
 
-## Kinect
+## Sensor Kinect
 
-![Logo](assets/2017-mm-curso-kinect-facebook.jpg)
+![Kinect sensor](assets/images/sensor-kinect.png)
+
++++
+
+Video de ejemplo Kinect
+
++++
+
+### v1
+
+![Kinect componentes](assets/images/kinect-interior.png)
+Salió a finales de 2010. 
+La profundidad de captura va de **0.5** a **4.5 metros**.
+Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x240** para el D.
+
++++
+
+#### Requerimientos
+![Kinect adaptador v1](assets/images/adaptador-v1.jpg)
+- Modelos compatibles: 1414 y 1473 __(este último trae algunos bugs)__
+- Necesita un adaptador especial
+- Se puede usar con Win, Mac y Linux
+- USB 2.0
+
++++
+
+### v2
+
+![Kinect one for XBox](assets/images/kinect-one.png)
+Salió a finales de 2013. La profundidad de captura es igual.
+Envía data a **30 FPS** con una resolución de **1920x1080** para el RGB y **512x424** para el D.
+Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
+
++++
+
+#### Requerimientos
+![Kinect adaptador v2](assets/images/adaptador-v2-alt.jpg)
+- Necesita un adaptador MUY especial __(no hay chinos)__
+- Se puede usar con Win __(W8 64 bit)__ y Mac __(OSx >= 10.9 y sin análisis de imagen)__
+- USB 3.0
+
++++
+
+#### Drivers
+
+![Open Kinect](assets/images/logo-openkinect.png)
+[https://openkinect.org](https://openkinect.org)
+__RGB e imágen de profundidad (Depth), Motor, Acelerómetro, LED, Audio__
+
+##### v1: [https://github.com/OpenKinect/libfreenect](https://github.com/OpenKinect/libfreenect)
+##### v2: [https://github.com/OpenKinect/libfreenect2](https://github.com/OpenKinect/libfreenect2)
+##### Guía: https://openkinect.org/wiki/Getting_Started
 
 
-Video 1 de accion con Kinect
-Video 2 de accion con Kinect
-Video 3 de accion con Kinect
+---
 
-Conociendo el Kinect
-No es tan nueva (finales de 2010), pero no deja de ser interesante
+## Processing
+![Processing3](assets/images/processing3-logo.png)
+[http://processing.org/](http://processing.org/)
 
-Componentes del kinect
-imagen
++++
 
-Proyector Infrarojo
-Camara color (RGB)
-Camara infrarojo
-Multi-array de micrófonos
-Motor de inclinación
-Acelerómetro
+### Open Kinect for Processing
+![Open Kinect for Processing](assets/images/openkinect.jpg)
+https://github.com/shiffman/OpenKinect-for-Processing
 
-![Adaptador para PC](assets/images/adaptador-v1.jpg)
-Adaptador para PC
++++
 
-## Resolución
-La profundidad de captura va de 0.7 a 3.5 metros. La información es recogida a 30 frames por segundo en una resolución de 640 por 480px.
-
-## Drivers
-https://github.com/OpenKinect/libfreenect
-https://github.com/OpenKinect/libfreenect2
+### SimpleOpenNi
 https://structure.io/openni
+https://code.google.com/archive/p/simple-openni/
+https://github.com/wexstorm/simple-openni
 
-https://openkinect.org/wiki/Main_Page
++++
+
+### Kinect v2 for Processing
+![Kinect v2 for Processing](assets/images/openkinect.jpg)
+Se necesita correr desde Windows.
+Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esqueleto entre otras cosas.
 
 
-1
-brew install libfreenect
+---
+
+## CODE
+
++++
+
+1. Cámara RGB
+
++++
+
+2. Imagen infrarroja
+
++++
+
+3. Mapa e imagen de profundidad
+
++++
+
+4. Nube de puntos
+
+
+---
+
+## OpenFrameworks
+![OpenFrameworks](assets/images/of-logo.png)
+[http://openframeworks.cc/](http://openframeworks.cc/)
+
++++
+
+1. All Together
+
+---
+
+## Encuentro 2
+
+---
+
+`brew install libfreenect`
 Una vez instalada la librería conectamos la cámara a la corriente y luego al puerto USB y ejecutamos:
-
-
-freenect-glview
-1
-freenect-glview
+`freenect-glview`
 Listo, la cámara está corriendo y  deberías estar viendo una imagen como la siguiente.
+
 <small>
     <span style="color: #562F99">‘w’</span> – tilt up (contra picar),
     <span style="color: #562F99">‘s’</span> – level (nivelar),
@@ -97,103 +185,10 @@ Listo, la cámara está corriendo y  deberías estar viendo una imagen como la s
     <span style="color: #562F99">‘r’</span> – raw color (color original)
 </small>
 
-
-## Processing
-https://github.com/shiffman/OpenKinect-for-Processing
-
-
-## Kinect 2 (one for xbox)
-
-
-## LeapMotion (manos)
-
-
-## Kinect + LeapMotion + CardBoard
-
-
-
-
-#### Get the word out
-<br>
-<span style="color:gray">Markdown Presentations For Everyone</span>
-<br>
-<span style="color:gray">on</span>
-<br>
-<span style="color:gray">GitHub, GitLab and Bitbucket</span>
-
 ---
 
-### GitPitch turns <span style="color: #562F99; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
-<br>
-<span style="color:gray; font-size:0.6em;">[ JUST LIKE THIS ONE ]</span>
-
----
-
-### No more <span style="color: #666666">Keynote.</span>
-### No more <span style="color: #666666">Powerpoint.</span>
-<br>
-### Just <span style="color: #562F99">Markdown</span>. Then <span style="color: #562F99">Git-Commit</span>.
-
----
-
-<span style="color: #562F99">STEP 1. PITCHME.md</span>
-
-![MARKDOWN](https://d1z75bzl1vljy2.cloudfront.net/hello-world/markdown.png)
-
-Create GitPitch slideshow content using GitHub flavored Markdown in your favorite editor.
-
----
-
-<span style="color: #562F99">STEP 2. GIT-COMMIT</span>
-
-![TERMINAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/terminal.png)
-
-Git-commit on any branch and push your PITCHME.md to GitHub, GitLab or Bitbucket.
-
----
-
-<span style="color: #562F99">STEP 3. GET THE WORD OUT!</span>
-
-<br>
-
-<span style="font-size: 1.3em;"><span style="color:#AADC69">htt</span><span style="color:#AADC69">ps://git</span><span style="color: #562F99">pitch</span><span style="color: #AADC69">.com/<span style="color: #562F99">user</span>/<span style="color: #562F99">repo</span>/<span style="color: #562F99">branch</span></span>
-
-<br>
-
-Instantly use your GitPitch slideshow URL to promote, pitch or present absolutely anything.
-
----
-
-<span style="color: #562F99">GIT</span>PITCH DESIGNED FOR SHARING
-
-![SOCIAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/gp-social.jpg)
-
-- View any slideshow at its public URL
-- Promote any slideshow using a GitHub badge
-- Embed any slideshow within a blog or website
-- Share any slideshow on Twitter, LinkedIn, etc
-- Print any slideshow as a PDF document
-- Download and present any slideshow offline
-
----
-
-<span style="color: #562F99">GIT</span>PITCH FEATURE RICH SLIDESHOWS
-
-- GitHub Flavored Markdown +
-- Code Block and GIST Slides
-- Image and Video Slides
-- Custom Logos and Backgrounds
-- Multiple Themes And More
-- <span style="color: #562F99">Plus...</span>
-- Your Slideshow Is Part Of Your Project
-- Under Git Version Control Within Your Git Repo
-
-
----
-
-### Go for it.
-### Just add <span style="color: #562F99; text-transform: none">PITCHME.md</span> ;)
-
+## Bonus: LeapMotion (manos)
+### Kinect + LeapMotion + CardBoard
 
 ---
 
@@ -202,20 +197,13 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 - Hacking the kinect
 - Learning Processing Shiffman
 
-+++
+---
 
-## Enlaces útiles
-- [Name](#)
+## Gracias
 
-+++
-
-### Repositorio
+Mariano Rivas
+<span style="color: gray">colormono@gmail.com</span>
 <span style="color: gray">https://github.com/colormono/kinect-notes</span>
-
-+++
-
-### Presentación
-<span style="color: gray">https://gitpitch.com/colormono/kinect-notes/master</span>
 
 +++
 
@@ -224,10 +212,3 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 $violeta : #562F99
 $verde : #AADC69
 $gray : gray
-
----
-
-## Gracias
-
-Mariano Rivas
-<span style="color: gray">colormono@gmail.com</span>

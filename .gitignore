@@ -1,19 +1,13 @@
-# Ignore Play! working directory #
-bin/
-/db
-.eclipse
-/lib/
-/logs/
-/modules
-/project/target
-/project/project/target
-/target
-tmp/
-test-result
-server.pid
-*.eml
-/dist/
-.cache
-.classpath
-.project
-.settings/
+# Hidden folders
+.*/
+
+# OS generated files
+.DS_Store
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Ignore specific folders
+/assets/videos
+/resources
