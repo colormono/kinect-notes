@@ -51,6 +51,7 @@ Multi-array de micrófonos
 Motor de inclinación
 Acelerómetro
 
+![Adaptador para PC](assets/images/adaptador-v1.jpg)
 Adaptador para PC
 
 ## Resolución
