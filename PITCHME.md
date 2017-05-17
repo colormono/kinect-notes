@@ -1,33 +1,43 @@
-
-![Apuntes Kinect](assets/2017-mm-curso-kinect-facebook.jpg)
+![Kinect](assets/images/kinectp-640x353.jpg)
+# Apuntes Kinect
 
 ---
 
-## Encuentro 1
-Presentación de Mariano
-Presentación de alumnos
-(Nombre, De dónde venís? Por qué estás acá?)
+### Encuentro 1
 
++++ 
 
-Presentación del sensor Kinect
-Presentación de la librería SimpleOpenNI
-Instalación (Windows, Linux, OSx)
-Uso de librerías en Processing
-Modos de visualización
-- Mapa e imagen de profundidad
-- Imagen infrarroja
-- Nube de puntos
+- Presentación
+    - Instructor
+    - Participantes (Nombre, De dónde venís? Por qué estás acá?)
 
-Ejemplos:
-- RGBd?
++++
 
-Bibliografía
-- Making things see
-- Hacking the kinect
-- Learning Processing Shiffman
+- Kinect
+    - Presentación del sensor
+    - Drivers
+    - Instalación (Windows, Linux, OSx)
 
-Link a este repo.
++++
 
+- Librerías
+    - Libfreekinect
+    - SimpleOpenNI
+
++++
+
+- Processing
+    - Cámara RGB
+    - Imagen infrarroja
+    - Mapa e imagen de profundidad
+    - Nube de puntos
+
++++
+
+- Ejemplos
+    - RGBD
+
+---
 
 ## Kinect
 
@@ -74,18 +84,18 @@ freenect-glview
 1
 freenect-glview
 Listo, la cámara está corriendo y  deberías estar viendo una imagen como la siguiente.
-
-‘w’ – tilt up (contra picar),
-‘s’ – level (nivelar),
-‘x’ – tilt down (picar),
-‘0’-‘6’ – select LED mode (modo del led),
-‘f’ – change video format (formato del video),
-‘m’ – mirror video (espejar),
-‘o’ – rotate video with accelerometer (rotar video con acelerometro),
-‘e’ – auto exposure (auto exposición),
-‘b’ – white balance (balance de blancos),
-‘r’ – raw color (color original)
-
+<small>
+    <span style="color: #562F99">‘w’</span> – tilt up (contra picar),
+    <span style="color: #562F99">‘s’</span> – level (nivelar),
+    <span style="color: #562F99">‘x’</span> – tilt down (picar),
+    <span style="color: #562F99">‘0’-‘6’</span> – select LED mode (modo del led),
+    <span style="color: #562F99">‘f’</span> – change video format (formato del video),
+    <span style="color: #562F99">‘m’</span> – mirror video (espejar),
+    <span style="color: #562F99">‘o’</span> – rotate video with accelerometer (rotar video con acelerometro),
+    <span style="color: #562F99">‘e’</span> – auto exposure (auto exposición),
+    <span style="color: #562F99">‘b’</span> – white balance (balance de blancos),
+    <span style="color: #562F99">‘r’</span> – raw color (color original)
+</small>
 
 
 ## Processing
@@ -113,7 +123,7 @@ https://github.com/shiffman/OpenKinect-for-Processing
 
 ---
 
-### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
+### GitPitch turns <span style="color: #562F99; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
 <span style="color:gray; font-size:0.6em;">[ JUST LIKE THIS ONE ]</span>
 
@@ -122,11 +132,11 @@ https://github.com/shiffman/OpenKinect-for-Processing
 ### No more <span style="color: #666666">Keynote.</span>
 ### No more <span style="color: #666666">Powerpoint.</span>
 <br>
-### Just <span style="color: #e49436">Markdown</span>. Then <span style="color: #e49436">Git-Commit</span>.
+### Just <span style="color: #562F99">Markdown</span>. Then <span style="color: #562F99">Git-Commit</span>.
 
 ---
 
-<span style="color: #e49436">STEP 1. PITCHME.md</span>
+<span style="color: #562F99">STEP 1. PITCHME.md</span>
 
 ![MARKDOWN](https://d1z75bzl1vljy2.cloudfront.net/hello-world/markdown.png)
 
@@ -134,7 +144,7 @@ Create GitPitch slideshow content using GitHub flavored Markdown in your favorit
 
 ---
 
-<span style="color: #e49436">STEP 2. GIT-COMMIT</span>
+<span style="color: #562F99">STEP 2. GIT-COMMIT</span>
 
 ![TERMINAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/terminal.png)
 
@@ -142,11 +152,11 @@ Git-commit on any branch and push your PITCHME.md to GitHub, GitLab or Bitbucket
 
 ---
 
-<span style="color: #e49436">STEP 3. GET THE WORD OUT!</span>
+<span style="color: #562F99">STEP 3. GET THE WORD OUT!</span>
 
 <br>
 
-<span style="font-size: 1.3em;"><span style="color:white">htt</span><span style="color:white">ps://git</span><span style="color: #e49436">pitch</span><span style="color: white">.com/<span style="color: #e49436">user</span>/<span style="color: #e49436">repo</span>/<span style="color: #e49436">branch</span></span>
+<span style="font-size: 1.3em;"><span style="color:#AADC69">htt</span><span style="color:#AADC69">ps://git</span><span style="color: #562F99">pitch</span><span style="color: #AADC69">.com/<span style="color: #562F99">user</span>/<span style="color: #562F99">repo</span>/<span style="color: #562F99">branch</span></span>
 
 <br>
 
@@ -154,7 +164,7 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 
 ---
 
-<span style="color: #e49436">GIT</span>PITCH DESIGNED FOR SHARING
+<span style="color: #562F99">GIT</span>PITCH DESIGNED FOR SHARING
 
 ![SOCIAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/gp-social.jpg)
 
@@ -167,14 +177,14 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 
 ---
 
-<span style="color: #e49436">GIT</span>PITCH FEATURE RICH SLIDESHOWS
+<span style="color: #562F99">GIT</span>PITCH FEATURE RICH SLIDESHOWS
 
 - GitHub Flavored Markdown +
 - Code Block and GIST Slides
 - Image and Video Slides
 - Custom Logos and Backgrounds
 - Multiple Themes And More
-- <span style="color: #e49436">Plus...</span>
+- <span style="color: #562F99">Plus...</span>
 - Your Slideshow Is Part Of Your Project
 - Under Git Version Control Within Your Git Repo
 
@@ -182,8 +192,42 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 ---
 
 ### Go for it.
-### Just add <span style="color: #e49436; text-transform: none">PITCHME.md</span> ;)
+### Just add <span style="color: #562F99; text-transform: none">PITCHME.md</span> ;)
 
 
-### Enalces
-https://www.youtube.com/watch?v=ZNxIzcM435E
+---
+
+## Bibliografía
+- Making things see
+- Hacking the kinect
+- Learning Processing Shiffman
+
++++
+
+## Enlaces útiles
+- [Name](#)
+
++++
+
+### Repositorio
+<span style="color: gray">https://github.com/colormono/kinect-notes</span>
+
++++
+
+### Presentación
+<span style="color: gray">https://gitpitch.com/colormono/kinect-notes/master</span>
+
++++
+
+### Color Scheme
+
+$violeta : #562F99
+$verde : #AADC69
+$gray : gray
+
+---
+
+## Gracias
+
+Mariano Rivas
+<span style="color: gray">colormono@gmail.com</span>
