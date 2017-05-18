@@ -52,10 +52,17 @@
 
 +++
 
-![Video](assets/videos/seventh-sense.mp4)
-<!-- ![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ) -->
+<!-- ![Video](assets/videos/seventh-sense.mp4) -->
+![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ)<br>
 <span style="color: #562F99">Seventh Sense (Excerpt)</span><br>
 <span style="color: #AADC69">Anarchy Dance Theatre + Ultra Combos</span><br>
+
++++
+
+<!-- ![Video](assets/videos/seventh-sense.mp4) -->
+![Video](https://vimeo.com/45417241)<br>
+<span style="color: #562F99">The V Motion Project </span><br>
+<span style="color: #AADC69">Colenso BBDO</span><br>
 
 +++
 
@@ -100,10 +107,11 @@ Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 [https://openkinect.org](https://openkinect.org)<br>
 __RGB e imágen de profundidad (Depth), Motor, Acelerómetro, LED, Audio__
 
+<small>
 ##### v1: [https://github.com/OpenKinect/libfreenect](https://github.com/OpenKinect/libfreenect)
 ##### v2: [https://github.com/OpenKinect/libfreenect2](https://github.com/OpenKinect/libfreenect2)
 ##### Guía: https://openkinect.org/wiki/Getting_Started
-
+</small>
 
 ---
 
@@ -120,9 +128,10 @@ https://github.com/shiffman/OpenKinect-for-Processing
 +++
 
 ### SimpleOpenNi
-https://structure.io/openni
-https://code.google.com/archive/p/simple-openni/
-https://github.com/wexstorm/simple-openni
+![SimpleOpenNi Skeleton Tracking](assets/images/simpleopenni-skeleton-tracking.png)<br>
+Permite usar el analysis de la imagen para obtener las uniones del cuerpo humano.
+https://github.com/wexstorm/simple-openni<br>
+https://structure.io/openni<br>
 
 +++
 
@@ -226,50 +235,50 @@ PImage img = kinect.getVideoImage();
 
 +++
 
-![Video](assets/videos/mechanical-mirrors.mp4)
-<!-- ![Video](https://player.vimeo.com/video/101408845) -->
+<!-- ![Video](assets/videos/mechanical-mirrors.mp4) -->
+![Video](https://player.vimeo.com/video/101408845)<br>
 <span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-![Video](assets/videos/iris-hybe.mp4)
-<!-- ![Video](https://player.vimeo.com/video/101408845) -->
+<!-- ![Video](assets/videos/iris-hybe.mp4) -->
+![Video](https://player.vimeo.com/video/101408845)<br>
 <span style="color: #562F99">Iris - HYBE Collective</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-![Video](assets/videos/musica.mp4)
-<!-- ![Video](https://player.vimeo.com/video/82414802) -->
+<!-- ![Video](assets/videos/musica.mp4) -->
+![Video](https://player.vimeo.com/video/82414802)<br>
 <span style="color: #562F99">Música (Tan Biónica) - QUALE Studio</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
-![Video](assets/videos/phantom.mp4)
-<!-- ![Video](https://www.youtube.com/watch?v=HFpou6izBQg) -->
+<!-- ![Video](assets/videos/phantom.mp4) -->
+![Video](https://www.youtube.com/watch?v=HFpou6izBQg)<br>
 <span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
-![Video](assets/images/dazzling-ir.jpg)
+![Video](assets/images/dazzling-ir.jpg)<br>
 <!-- [Video](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/) -->
 <span style="color: #562F99">Kinect’s Dazzling Infrared Lights Disco</span><br>
 <span style="color: #AADC69">Fotografía de patrones IR</span><br>
 
 +++
 
-![Video](assets/videos/nikefuel_station.mp4)
-<!-- ![Video](https://vimeo.com/44338220) -->
+<!-- ![Video](assets/videos/nikefuel_station.mp4) -->
+![Video](https://vimeo.com/44338220)<br>
 <span style="color: #562F99">Nike Fuel Station | Onformative</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-![Video](assets/videos/fabricate-yourself.mp4)
-<!-- ![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo) -->
+<!-- ![Video](assets/videos/fabricate-yourself.mp4) -->
+![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo)<br>
 <span style="color: #562F99">Fabricate Yourself</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
