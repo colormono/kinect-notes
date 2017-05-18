@@ -268,7 +268,7 @@ PImage img = kinect.getVideoImage();
 
 +++
 
-![Video](assets/images/dazzling-ir.jpg)<br>
+![Dazzling](assets/images/dazzling-ir.jpg)<br>
 <span style="color: #562F99">[Kinect’s Dazzling Infrared Lights Disco](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)</span><br>
 <span style="color: #AADC69">Fotografía de patrones IR</span><br>
 
