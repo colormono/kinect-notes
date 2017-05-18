@@ -4,26 +4,37 @@
 
 import org.openkinect.processing.*;
 
-Kinect kinect; 
 //Kinect2 kinect; 
-
-boolean inColor = false;
+Kinect kinect; 
 
 void setup() {
-   size(640, 480);
-   kinect = new Kinect(this);
-   kinect.initDepth(); // 
-   //kinect.initDevice(); // Sólo para kinect2
+  size(640, 480);
+  kinect = new Kinect(this);
+  kinect.initDepth();
+  //kinect.initDevice(); // Sólo para kinect2
 }
 
 void draw() {
-   background(0);
-   
-   kinect.enableColorDepth(inColor);
-   PImage img = kinect.getDepthImage();
-   image(img, 0, 0);
-}
+  background(0);
 
-void keyPressed() {
-   inColor = !inColor;
+  PImage img = kinect.getDepthImage();
+  image(img, 0, 0);
+
+  // RAW data
+  int[] depth = kinect.getRawDepth();
+
+  noStroke();
+  int size = 5;
+  for (int x=0; x<img.width; x+=size) {
+    for (int y=0; y<img.height; y+=size) {
+      int index = x + y * img.width;
+
+      // profundidad del punto
+      int d = depth[index];
+      float p = map(d, 0, 2048, 0, 255);
+
+      fill(p);
+      rect(x, y, size, size);
+    }
+  }
 }

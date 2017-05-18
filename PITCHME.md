@@ -53,14 +53,14 @@
 +++
 
 <!-- ![Video](assets/videos/seventh-sense.mp4) -->
-![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ)<br>
+![Video](https://www.youtube.com/embed/iQlDEPLHPyQ)<br>
 <span style="color: #562F99">Seventh Sense (Excerpt)</span><br>
 <span style="color: #AADC69">Anarchy Dance Theatre + Ultra Combos</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/seventh-sense.mp4) -->
-![Video](https://vimeo.com/45417241)<br>
+<!-- ![Video](assets/videos/the_v_motion_project.mp4) -->
+![Video](https://player.vimeo.com/video/45417241)<br>
 <span style="color: #562F99">The V Motion Project </span><br>
 <span style="color: #AADC69">Colenso BBDO</span><br>
 
@@ -105,7 +105,8 @@ Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 
 ![Open Kinect](assets/images/logo-openkinect.png)<br>
 [https://openkinect.org](https://openkinect.org)<br>
-__RGB e imágen de profundidad (Depth), Motor, Acelerómetro, LED, Audio__
+__RGB e imágen de profundidad (Depth) y Motor__<br>
+__Acelerómetro, LED, Audio__
 
 <small>
 ##### v1: [https://github.com/OpenKinect/libfreenect](https://github.com/OpenKinect/libfreenect)
@@ -129,16 +130,16 @@ https://github.com/shiffman/OpenKinect-for-Processing
 
 ### SimpleOpenNi
 ![SimpleOpenNi Skeleton Tracking](assets/images/simpleopenni-skeleton-tracking.png)<br>
-Permite usar el analysis de la imagen para obtener las uniones del cuerpo humano.
-https://github.com/wexstorm/simple-openni<br>
-https://structure.io/openni<br>
+Reconocimiento de las uniones del cuerpo humano.<br>
+Librería: https://github.com/wexstorm/simple-openni<br>
+Driver: https://structure.io/openni _(Sólo windows y linux)_
 
 +++
 
 ### Kinect v2 for Processing
 ![Kinect v2 for Processing](assets/images/openkinect.jpg)<br>
-Se necesita correr desde Windows.<br>
-Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esqueleto entre otras cosas.
+Se basa en el SDK oficial de Microsoft.<br>
+Necesita correr en Windows.
 
 
 ---
@@ -210,12 +211,15 @@ PImage img = kinect.getVideoImage();
 +++
 
 #### Otras funciones
+**enableColorDepth(boolean)** — mostrar profundidad en color<br>
 
-**enableMirror(boolean)** — espejar imagen (v1)<br>
-**enableColorDepth(boolean)** — color para la imagen de profundidad (v1)<br>
-**float getTilt()** — consultar el angulo del motor (v1)<br>
-**setTilt(float)** — ajustar el abgulo del motor (entre -30 y 30) (v1)<br>
-**PImage getRegisteredImage()** — imagen con correspondencia RGB+D (v2)<br>
+#### Sólo V1
+**enableMirror(boolean)** — espejar imagen<br>
+**float getTilt()** — consultar angulo del motor<br>
+**setTilt(float)** — definir angulo del motor (entre -30 y 30)<br>
+
+#### Sólo V2
+**PImage getRegisteredImage()** — imagen con correspondencia RGB+D<br>
 
 
 ---
@@ -226,7 +230,8 @@ PImage img = kinect.getVideoImage();
 
 +++
 
-1. All Together
+![ofxKinect](assets/images/ofxKinect.jpg)<br>
+1. ofxKinect
 
 
 ---
@@ -243,7 +248,7 @@ PImage img = kinect.getVideoImage();
 +++
 
 <!-- ![Video](assets/videos/iris-hybe.mp4) -->
-![Video](https://player.vimeo.com/video/101408845)<br>
+![Video](https://www.youtube.com/embed/qhdG7OltXnU)<br>
 <span style="color: #562F99">Iris - HYBE Collective</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
@@ -257,28 +262,27 @@ PImage img = kinect.getVideoImage();
 +++
 
 <!-- ![Video](assets/videos/phantom.mp4) -->
-![Video](https://www.youtube.com/watch?v=HFpou6izBQg)<br>
+![Video](https://www.youtube.com/embed/HFpou6izBQg)<br>
 <span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
-![Video](assets/images/dazzling-ir.jpg)<br>
-<!-- [Video](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/) -->
+[![Video](assets/images/dazzling-ir.jpg)](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)<br>
 <span style="color: #562F99">Kinect’s Dazzling Infrared Lights Disco</span><br>
 <span style="color: #AADC69">Fotografía de patrones IR</span><br>
 
 +++
 
 <!-- ![Video](assets/videos/nikefuel_station.mp4) -->
-![Video](https://vimeo.com/44338220)<br>
+![Video](https://player.vimeo.com/video/44338220)<br>
 <span style="color: #562F99">Nike Fuel Station | Onformative</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
 <!-- ![Video](assets/videos/fabricate-yourself.mp4) -->
-![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo)<br>
+![Video](https://www.youtube.com/embed/6PWaU4u5QVo)<br>
 <span style="color: #562F99">Fabricate Yourself</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
@@ -291,9 +295,11 @@ PImage img = kinect.getVideoImage();
 
 ## Bonus
 ### [TSPS](http://www.tsps.cc/)
-### LeapMotion (manos)
-### Kinect + LeapMotion + CardBoard
-### Kinect + Arduino + OSC
+### [Synapse](http://synapsekinect.tumblr.com/post/6305020721/download)
+### Kinect + Raspberry GPIO
+### Kinect + Raspberry + OSC
+### Kinect + Arduino Serial
+### LeapMotion
 ### Syphon
 
 ---
