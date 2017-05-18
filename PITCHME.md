@@ -42,7 +42,6 @@
 +++
 
 ### Casos
-- RGBD
 
 
 ---
@@ -53,7 +52,10 @@
 
 +++
 
-Video de ejemplo Kinect
+![Video](assets/videos/seventh-sense.mp4)
+<!--![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ)-->
+<span style="color: #562F99">Seventh Sense (Excerpt)</span><br>
+<span style="color: #AADC69">Anarchy Dance Theatre + Ultra Combos</span><br>
 
 +++
 
@@ -136,19 +138,75 @@ Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esquel
 
 +++
 
-1. Cámara RGB
+```java
+import org.openkinect.processing.*;
+
+Kinect kinect; 
+
+void setup() {
+   kinect = new Kinect(this);
+   //kinect.initVideo();
+}
+
+void draw() {
+   //PImage img = kinect.getVideoImage();
+   //image(img, 0, 0);
+}
+```
 
 +++
 
-2. Imagen infrarroja
+### <span style="color:#562F99">1.</span> Cámara RGB
+```java
+// Setup
+kinect.initVideo();
+// Draw
+kinect.enableMirror(true); // para espejar
+PImage img = kinect.getVideoImage();
+```
 
 +++
 
-3. Mapa e imagen de profundidad
+### <span style="color:#562F99">2.</span> Imagen infrarroja
+```java
+// Setup
+kinect.initVideo();
+kinect.enableIR(true);
+// Draw
+PImage img = kinect.getVideoImage();
+```
 
 +++
 
-4. Nube de puntos
+### <span style="color:#562F99">3.</span> Imagen de profundidad
+```java
+// Setup
+kinect.initDepth();
+kinect.enableColorDepth(true); // si queremos mapa de color
+// Draw
+PImage img = kinect.getDepthImage();
+```
+
++++
+
+### <span style="color:#562F99">4.</span> Nube de puntos
+```java
+// Setup
+size(640, 480, P3D); // Usar el render en P3d
+kinect.initDepth();
+// Draw
+PImage img = kinect.getVideoImage();
+```
+
++++
+
+#### Otras funciones
+
+**enableMirror(boolean)** — espejar imagen (v1)<br>
+**enableColorDepth(boolean)** — color para la imagen de profundidad (v1)<br>
+**float getTilt()** — consultar el angulo del motor (v1)<br>
+**setTilt(float)** — ajustar el abgulo del motor (entre -30 y 30) (v1)<br>
+**PImage getRegisteredImage()** — imagen con correspondencia RGB+D (v2)<br>
 
 
 ---
@@ -161,34 +219,73 @@ Utiliza el SDK oficial de Microsoft para analizar la imagen y devolver el esquel
 
 1. All Together
 
+
+---
+
+## CASOS
+
++++
+
+![Video](assets/videos/mechanical-mirrors.mp4)
+<!--![Video](https://player.vimeo.com/video/101408845)-->
+<span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span><br>
+<span style="color: #AADC69">Análisis de profundidad</span><br>
+
++++
+
+![Video](assets/videos/iris-hybe.mp4)
+<!--![Video](https://player.vimeo.com/video/101408845)-->
+<span style="color: #562F99">Iris - HYBE Collective</span><br>
+<span style="color: #AADC69">Análisis de profundidad</span><br>
+
++++
+
+![Video](assets/videos/musica.mp4)
+<!--![Video](https://player.vimeo.com/video/82414802)-->
+<span style="color: #562F99">Música (Tan Biónica) - QUALE Studio</span><br>
+<span style="color: #AADC69">Point Cloud | RGBD</span><br>
+
++++
+
+![Video](assets/videos/phantom.mp4)
+<!--![Video](https://www.youtube.com/watch?v=HFpou6izBQg)-->
+<span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span><br>
+<span style="color: #AADC69">Point Cloud | RGBD</span><br>
+
++++
+
+![Video](assets/images/dazzling-ir.jpg)
+<!--[Video](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)-->
+<span style="color: #562F99">Kinect’s Dazzling Infrared Lights Disco</span><br>
+<span style="color: #AADC69">Fotografía de patrones IR</span><br>
+
++++
+
+![Video](assets/videos/nikefuel_station.mp4)
+<!--![Video](https://vimeo.com/44338220)-->
+<span style="color: #562F99">Nike Fuel Station | Onformative</span><br>
+<span style="color: #AADC69">Análisis de profundidad</span><br>
+
++++
+
+![Video](assets/videos/fabricate-yourself.mp4)
+<!--![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo)-->
+<span style="color: #562F99">Fabricate Yourself</span><br>
+<span style="color: #AADC69">Análisis de profundidad</span><br>
+
+
 ---
 
 ## Encuentro 2
 
 ---
 
-`brew install libfreenect`<br>
-Una vez instalada la librería conectamos la cámara a la corriente y luego al puerto USB y ejecutamos:<br>
-`freenect-glview`<br>
-Listo, la cámara está corriendo y  deberías estar viendo una imagen como la siguiente.
-
-<small>
-    <span style="color: #562F99">‘w’</span> – tilt up (contra picar),
-    <span style="color: #562F99">‘s’</span> – level (nivelar),
-    <span style="color: #562F99">‘x’</span> – tilt down (picar),
-    <span style="color: #562F99">‘0’-‘6’</span> – select LED mode (modo del led),
-    <span style="color: #562F99">‘f’</span> – change video format (formato del video),
-    <span style="color: #562F99">‘m’</span> – mirror video (espejar),
-    <span style="color: #562F99">‘o’</span> – rotate video with accelerometer (rotar video con acelerometro),
-    <span style="color: #562F99">‘e’</span> – auto exposure (auto exposición),
-    <span style="color: #562F99">‘b’</span> – white balance (balance de blancos),
-    <span style="color: #562F99">‘r’</span> – raw color (color original)
-</small>
-
----
-
-## Bonus: LeapMotion (manos)
+## Bonus
+### [TSPS](http://www.tsps.cc/)
+### LeapMotion (manos)
 ### Kinect + LeapMotion + CardBoard
+### Kinect + Arduino + OSC
+### Syphon
 
 ---
 

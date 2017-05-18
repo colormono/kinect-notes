@@ -8,7 +8,9 @@
 - [Driver v2](https://github.com/OpenKinect/libfreenect2)
 - [Homebrew](http://brew.sh/)
 - [Processing](http://processing.org/)
+- [Processing Reference](https://processing.org/reference/)
 - [OpenKinect for Processing](https://github.com/shiffman/OpenKinect-for-Processing)
+- [OpenKinect Reference](http://shiffman.net/p5/kinect/)
 - [OpenFrameworks](http://openframeworks.cc/)
 
 ---

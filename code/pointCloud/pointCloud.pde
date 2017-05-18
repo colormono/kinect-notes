@@ -1,3 +1,7 @@
+// Valores para la profundidad en RAW:
+// v1 = 0 y 2048
+// v2 = 0 y 4500
+
 import org.openkinect.processing.*;
 
 Kinect kinect; 
