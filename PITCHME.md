@@ -53,7 +53,7 @@
 +++
 
 ![Video](assets/videos/seventh-sense.mp4)
-<!--![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ)-->
+<!-- ![Video](https://www.youtube.com/watch?v=iQlDEPLHPyQ) -->
 <span style="color: #562F99">Seventh Sense (Excerpt)</span><br>
 <span style="color: #AADC69">Anarchy Dance Theatre + Ultra Combos</span><br>
 
@@ -227,49 +227,49 @@ PImage img = kinect.getVideoImage();
 +++
 
 ![Video](assets/videos/mechanical-mirrors.mp4)
-<!--![Video](https://player.vimeo.com/video/101408845)-->
+<!-- ![Video](https://player.vimeo.com/video/101408845) -->
 <span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
 ![Video](assets/videos/iris-hybe.mp4)
-<!--![Video](https://player.vimeo.com/video/101408845)-->
+<!-- ![Video](https://player.vimeo.com/video/101408845) -->
 <span style="color: #562F99">Iris - HYBE Collective</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
 ![Video](assets/videos/musica.mp4)
-<!--![Video](https://player.vimeo.com/video/82414802)-->
+<!-- ![Video](https://player.vimeo.com/video/82414802) -->
 <span style="color: #562F99">Música (Tan Biónica) - QUALE Studio</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
 ![Video](assets/videos/phantom.mp4)
-<!--![Video](https://www.youtube.com/watch?v=HFpou6izBQg)-->
+<!-- ![Video](https://www.youtube.com/watch?v=HFpou6izBQg) -->
 <span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
 ![Video](assets/images/dazzling-ir.jpg)
-<!--[Video](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)-->
+<!-- [Video](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/) -->
 <span style="color: #562F99">Kinect’s Dazzling Infrared Lights Disco</span><br>
 <span style="color: #AADC69">Fotografía de patrones IR</span><br>
 
 +++
 
 ![Video](assets/videos/nikefuel_station.mp4)
-<!--![Video](https://vimeo.com/44338220)-->
+<!-- ![Video](https://vimeo.com/44338220) -->
 <span style="color: #562F99">Nike Fuel Station | Onformative</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
 ![Video](assets/videos/fabricate-yourself.mp4)
-<!--![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo)-->
+<!-- ![Video](https://www.youtube.com/watch?v=6PWaU4u5QVo) -->
 <span style="color: #562F99">Fabricate Yourself</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
