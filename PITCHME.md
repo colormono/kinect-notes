@@ -52,14 +52,14 @@
 
 +++
 
-<!-- ![Video](assets/videos/seventh-sense.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/seventh-sense.mp4" type="video/mp4"></video><br> -->
 ![Video](https://www.youtube.com/embed/iQlDEPLHPyQ)<br>
 <span style="color: #562F99">Seventh Sense (Excerpt)</span><br>
 <span style="color: #AADC69">Anarchy Dance Theatre + Ultra Combos</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/the_v_motion_project.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/the_v_motion_project.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/45417241)<br>
 <span style="color: #562F99">The V Motion Project </span><br>
 <span style="color: #AADC69">Colenso BBDO</span><br>
@@ -240,28 +240,28 @@ PImage img = kinect.getVideoImage();
 
 +++
 
-<!-- ![Video](assets/videos/mechanical-mirrors.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/mechanical-mirrors.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/101408845)<br>
 <span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/iris-hybe.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/iris-hybe.mp4" type="video/mp4"></video><br> -->
 ![Video](https://www.youtube.com/embed/qhdG7OltXnU)<br>
 <span style="color: #562F99">Iris - HYBE Collective</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/musica.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/musica.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/82414802)<br>
 <span style="color: #562F99">Música (Tan Biónica) - QUALE Studio</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/phantom.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/phantom.mp4" type="video/mp4"></video><br> -->
 ![Video](https://www.youtube.com/embed/HFpou6izBQg)<br>
 <span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span><br>
 <span style="color: #AADC69">Point Cloud | RGBD</span><br>
@@ -274,14 +274,14 @@ PImage img = kinect.getVideoImage();
 
 +++
 
-<!-- ![Video](assets/videos/nikefuel_station.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/nikefuel_station.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/44338220)<br>
 <span style="color: #562F99">Nike Fuel Station | Onformative</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
 
 +++
 
-<!-- ![Video](assets/videos/fabricate-yourself.mp4) -->
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/fabricate-yourself.mp4" type="video/mp4"></video><br> -->
 ![Video](https://www.youtube.com/embed/6PWaU4u5QVo)<br>
 <span style="color: #562F99">Fabricate Yourself</span><br>
 <span style="color: #AADC69">Análisis de profundidad</span><br>
