@@ -4,7 +4,7 @@
 
 ---
 
-### Intro
+### Temario
 
 +++
 
@@ -41,11 +41,31 @@
 ### Code: Tracking  
 
 - RAW Data
-- Punto Promedio
+- Detección de objetos **(en un rango específico)**
+- Centroide **(del obejto detectado)**
+- Punto Extremo **(ej. el más alto)**
+- Blobs
+
++++
+
+### OSC
+
+- Características
+- Librería oscP5
+- Código de ejemplo
+- Comunicación con Resolume
 
 +++
 
 ### Casos
+
+- Encuentro 1
+- Encuentro 2 
+- Encuentro 3
+- Encuentro 4
+
++++
+
 ### Bonus
 ### Bibliografía
 ### Cierre
