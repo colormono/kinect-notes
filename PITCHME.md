@@ -361,10 +361,9 @@ void oscEvent(OscMessage elMensaje) {
 }
 ```
 
+
 <!-- 
 VA EN EL ENCUENTRO 3
-
-+++
 
 ### Resolume
 
