@@ -30,6 +30,10 @@ void draw() {
   // RAW data
   int[] depth = kinect.getRawDepth();
   
+  // Contadores
+  float sumY = 0;
+  float count = 0;
+  
   // Imagen
   img = kinect.getDepthImage();
   
@@ -45,13 +49,20 @@ void draw() {
       if (d < threshold) {
         // pintar verde
         nuevaImg.pixels[index] = color(0, 255, 0);
+        // incrementar contadores
+        sumY += y;
+        count++;
       } else {
         nuevaImg.pixels[index] = color(0, 0, 255);
       }
-      
     }
   }
   nuevaImg.updatePixels();
-
   image(nuevaImg, 0, 0);
+
+  // Si encontró algo
+  if (count != 0) {
+    fill(255,0,0);
+    ellipse(width/2, sumY/count, 50, 50);
+  }
 }

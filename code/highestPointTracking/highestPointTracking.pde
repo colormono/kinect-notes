@@ -29,10 +29,15 @@ void draw() {
 
   // RAW data
   int[] depth = kinect.getRawDepth();
-  
+
+  // Contadores
+  float record = height;
+  float rX = 0;
+  float rY = 0;
+
   // Imagen
   img = kinect.getDepthImage();
-  
+
   nuevaImg.loadPixels();
   for (int x=0; x<img.width; x++) {
     for (int y=0; y<img.height; y++) {
@@ -45,13 +50,26 @@ void draw() {
       if (d < threshold) {
         // pintar verde
         nuevaImg.pixels[index] = color(0, 255, 0);
-      } else {
+
+        // Evaluar el punto Y más alto
+        if (y < record) {
+          // hay un nuevo record!
+          record = y;
+          rX = x;
+          rY = y;
+        }
+ 
+    } else {
         nuevaImg.pixels[index] = color(0, 0, 255);
       }
-      
     }
   }
   nuevaImg.updatePixels();
-
   image(nuevaImg, 0, 0);
+
+  // Si encontró algo
+  if (record < height) {
+    fill(255, 0, 0);
+    ellipse(rX, rY, 30, 30);
+  }
 }
