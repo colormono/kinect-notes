@@ -48,6 +48,15 @@
 
 +++
 
+### Code: Skeleton
+
+- Skeleton
+- Distancia entre dos Joints
+- Synapse
+- Kinect SDK (win)
+
++++
+
 ### OSC
 
 - Características
@@ -348,6 +357,62 @@ for (int x=0; x<img.width; x++) {
 
 ---
 
+## CODE  
+
+<small style="color:gray;">Skeleton</small>
+
++++
+
+<small style="color:gray;">Interfaz Natural de Usuario (NUI)</small>  
+
+Se interactúa con una aplicación mediante movimientos gestuales del cuerpo o de alguna de sus partes como las manos.
+También existe el control de sistemas operativos por medio de la voz humana, denominado control por reconocimiento del habla o reconocimiento de voz, como por ejemplo Siri, Google Now u OK Google.
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/nui.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/PJqbivkm0Ms)  
+
+
++++
+
+### Skeleton
+![Kinect componentes](assets/images/kinect-skeleton.png)  
+
++++
+
+### Motion Capture
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/distanceMeasurement.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/aNKfXN_OrbA)  
+
+
++++
+
+### Distancia entre dos Joints
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/distanceMeasurement.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/CScdZrYSr3I)  
+
+
++++
+
+### Synapse
+![Synapse](assets/images/synapse.jpg)  
+
+[http://synapsekinect.tumblr.com/](http://synapsekinect.tumblr.com/)  
+
+Puerto OSC: 12345 y 12347
+
+
++++
+
+### Kinect SDK
+![Kinect componentes](assets/images/skeleton.png)  
+
+
+---
+
 ## OSC  
 
 <small style="color:gray;">Open Sound Control</small>  
@@ -381,17 +446,15 @@ void oscEvent(OscMessage elMensaje) {
 }
 ```
 
-
-<!-- 
-VA EN EL ENCUENTRO 3
++++
 
 ### Resolume
 
-![OpenFrameworks](assets/images/osc-library.jpg)  
+![OpenFrameworks](assets/images/resolume-osc.png)  
 
-[Documentación](https://resolume.com/manual/es/r4/controlling)
+[Documentación](https://resolume.com/manual/es/r4/controlling#open_sound_control_osc)
 
--->
+
 
 ---
 
@@ -538,6 +601,12 @@ VA EN EL ENCUENTRO 3
 <span style="color: #AADC69">Blob Detection</span>  
 
 
+---
+
+## CASOS  
+<small style="color:gray;">Parte 3</small>
+
+
 +++
 
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/cinematique.mp4" type="video/mp4"></video><br> -->
@@ -548,8 +617,84 @@ VA EN EL ENCUENTRO 3
 <span style="color: #AADC69">Varias técnicas</span>  
 
 
-<!-- 
-VA EN EL ENCUENTRO 4
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/AndroidifyTSE.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/126631920)  
+
+<span style="color: #562F99">Androidify Times Square Experience | Google</span>  
+
+<span style="color: #AADC69">Esqueleto</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/50229394.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/50229394)  
+
+<span style="color: #562F99">The Treachery of Sanctuary | Chris Milk</span>  
+
+<span style="color: #AADC69">Esqueleto</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/PuppetParade.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/34824490)
+
+<span style="color: #562F99">Puppet Parade | I/O Design</span>  
+
+<span style="color: #AADC69">Esqueleto / Blobs</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/17180651)
+
+<span style="color: #562F99">DepthJS | Fluid Interfaces</span>  
+
+<span style="color: #AADC69">Gestos</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/43756177)
+
+<span style="color: #562F99">SPRING | SUGOI Inc</span>  
+
+<span style="color: #AADC69">Gestos</span>  
+
+
+
+---
+
+## CASOS  
+<small style="color:gray;">Parte 4</small>
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_1280x640.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/38874664)
+
+<span style="color: #562F99">Unnamed SoundSculpture | onformative</span>
+
+<span style="color: #AADC69">RAW Data | Multiples Kinect</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_(docu)_1280x640.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/38850289)
+
+<span style="color: #562F99">Unnamed SoundSculpture | onformative</span>
+
+<span style="color: #AADC69">RAW Data | Multiples Kinect</span>  
+
+
++++
+
 <video width="640" height="480" controls><source src="./assets/md/assets/videos/ar-sandbox.mp4" type="video/mp4"></video>  
 
 ![Video](https://www.youtube.com/embed/j9JXtTj0mzE)  
@@ -558,7 +703,6 @@ VA EN EL ENCUENTRO 4
 
 <span style="color: #AADC69">Raw DATA, Análisis de profundidad</span>  
 
- -->
 
 ---
 
@@ -566,11 +710,9 @@ VA EN EL ENCUENTRO 4
 
 ### [TSPS](http://www.tsps.cc/)
 ### [Synapse](http://synapsekinect.tumblr.com/post/6305020721/download)
-### Kinect + Raspberry GPIO
-### Kinect + Raspberry + OSC
-### Kinect + Arduino Serial
-### LeapMotion
-### Syphon
+### Kinect + Isadora
+### Kinect + Arduino
+### Syphon/Spout
 
 ---
 

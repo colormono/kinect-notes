@@ -95,13 +95,18 @@ void drawBlobsAndEdges(boolean drawBlobs, boolean drawEdges){
 
       // Marco
       if (drawBlobs){
+        float posXBlob = b.xMin*width;
+        float posYBlob = b.yMin*height;
+        float anchoBlob = b.w*width;
+        float altoBlob = b.h*height;
+        
         strokeWeight(1);
         stroke(255, 0, 0);
-        rect(b.xMin*width, b.yMin*height, b.w*width, b.h*height);
+        rect(posXBlob, posYBlob, anchoBlob, altoBlob);
 
         // ID
-        fill(255);
-        text(n, b.xMin*width, b.yMin*height);
+        fill(0,0,255);
+        text(n, posXBlob+anchoBlob/2, posYBlob+altoBlob/2);
       }
 
     }

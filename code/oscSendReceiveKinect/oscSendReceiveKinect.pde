@@ -36,7 +36,7 @@ void setup() {
   oscP5 = new OscP5(this, 9000);
 
   /* Enviar mensajes "localmente" por el puerto 12000 */
-  myRemoteLocation = new NetAddress("192.168.1.112", 12345);
+  myRemoteLocation = new NetAddress("192.168.3.55", 12345);
 }
 
 void draw() {

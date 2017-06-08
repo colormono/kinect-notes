@@ -12,7 +12,7 @@ PImage img;
 PImage nuevaImg;
 
 // Depth threshold
-int threshold = 745;
+int threshold = 875;
 
 void setup() {
   size(640, 480);

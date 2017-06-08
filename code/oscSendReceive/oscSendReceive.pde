@@ -11,10 +11,10 @@ void setup() {
   frameRate(25);
 
   /* Escuchas mensaje en el puerto 9000 */
-  oscP5 = new OscP5(this, 9000);
+  oscP5 = new OscP5(this, 12347);
 
   /* Enviar mensajes "localmente" por el puerto 12000 */
-  myRemoteLocation = new NetAddress("192.168.1.112", 12345);
+  myRemoteLocation = new NetAddress("localhost", 12345);
 }
 
 void draw() {
