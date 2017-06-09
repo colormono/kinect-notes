@@ -4,40 +4,39 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
-int currentMediaSet = 0;
+int currentMediaSet = 1;
 
 void setup() {
-  size(640, 480);
+  size(100, 10);
   frameRate(25);
 
   /* Escuchas mensaje en el puerto 9000 */
   oscP5 = new OscP5(this, 12347);
 
   /* Enviar mensajes "localmente" por el puerto 12000 */
-  myRemoteLocation = new NetAddress("localhost", 12345);
+  myRemoteLocation = new NetAddress("localhost", 7000);
 }
 
 void draw() {
   background(0);  
 
-  // Enviar mensaje: Opacidad
-  // Controlar opacidad (flotante entre 0 y 1)
+  // Enviar mensaje: Strobo (flotante entre 0 y 1)
   float x = map(mouseX, 0, width, 0, 1);
-  OscMessage msgOpacidad = new OscMessage("/md8key/ctrl_layer_alpha/1");
-  msgOpacidad.add(x);
-  oscP5.send(msgOpacidad, myRemoteLocation);
+  OscMessage msgStrobo = new OscMessage("/composition/link3/values");
+  msgStrobo.add(x);
+  oscP5.send(msgStrobo, myRemoteLocation);
 }
 
 void mousePressed() {
   // Enviar mensaje
   // Cambiar media set (int < 16)
-  OscMessage myY = new OscMessage("/md8key/ctrl_layer_media/1");
-  myY.add(currentMediaSet);
-  oscP5.send(myY, myRemoteLocation);
-  currentMediaSet++;
-  if(currentMediaSet>15){ currentMediaSet = 0; }
-}
+  OscMessage layer = new OscMessage("/layer1/clip"+currentMediaSet+"/connect");
+  layer.add(1);
+  oscP5.send(layer, myRemoteLocation);
 
+  currentMediaSet++;
+  if(currentMediaSet>5){ currentMediaSet = 1; }
+}
 
 // Recibir mensajes
 void oscEvent(OscMessage mensaje) {
