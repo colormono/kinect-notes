@@ -23,9 +23,16 @@
 ### Software  
 
 - Processing
-- Librerías
-    - Open Kinect
+    - OpenKinect
     - SimpleOpenNI
+    - BlobDetection
+    - oscP5
+- OpenFrameworks
+    - ofxKinect
+    - ofxOpenCv
+    - ofxOsc
+- Kinect SDK
+- Synapse
 
 +++
 
@@ -50,28 +57,26 @@
 
 ### Code: Skeleton
 
-- Skeleton
-- Distancia entre dos Joints
-- Synapse
+- Esqueleto **(articulaciones)**
+- Motion Capture **(testing)**
+- Synapse **(win/mac)**
+- Distancia entre dos **"Joints"**
 - Kinect SDK (win)
 
 +++
 
-### OSC
+### Code: Communication
 
-- Características
-- Librería oscP5
-- Código de ejemplo
-- Comunicación con Resolume
+- OSC, MIDI y Serial
+    - Características
+    - Resolume
+    - Isadora
+    - Arduino
+- Múltiples kinects
 
 +++
 
 ### Casos
-
-- Encuentro 1
-- Encuentro 2 
-- Encuentro 3
-- Encuentro 4
 
 +++
 
@@ -80,11 +85,13 @@
 ### Cierre
 
 
+
 ---
 
 ## Sensor Kinect  
 
 ![Kinect sensor](assets/images/sensor-kinect.png)
+
 
 +++
 
@@ -118,6 +125,7 @@ La profundidad de captura va de **0.5** a **4.5 metros**.
 
 Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x240** para el D.
 
+
 +++
 
 #### Requerimientos  
@@ -127,6 +135,7 @@ Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x
 - Necesita un adaptador especial
 - Se puede usar con Win, Mac y Linux
 - USB 2.0
+
 
 +++
 
@@ -140,19 +149,24 @@ Envía data a **30 FPS** con una resolución de **1920x1080** para el RGB y **51
 
 Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 
+
 +++
 
 #### Requerimientos  
 
 ![Kinect adaptador v2](assets/images/adaptador-v2-alt.jpg)  
 
-- Necesita un adaptador MUY especial __(no hay chinos)__
-- Se puede usar con Win __(W8 64 bit)__ y Mac __(OSx >= 10.9 y sin análisis de imagen)__
+- Necesita un adaptador **MUY** especial __(no hay genéricos)__
+- Se puede usar con Win8+ __(W8 64 bit)__ y Mac __(OSx >= 10.9; sin análisis de imagen)__
 - USB 3.0
+
 
 +++
 
 #### Drivers
+
+
++++
 
 ![Open Kinect](assets/images/logo-openkinect.png)  
 
@@ -168,6 +182,17 @@ __Acelerómetro, LED, Audio__
 ##### Guía: https://openkinect.org/wiki/Getting_Started
 </small>
 
++++
+
+![Kinect SDK](assets/images/kinect-sdk.png)  
+
+[https://developer.microsoft.com/en-us/windows/kinect](https://developer.microsoft.com/en-us/windows/kinect)  
+
+__RGB e imágen de profundidad (Depth) y Motor__  
+
+__Acelerómetro, LED, Audio__
+
+
 
 ---
 
@@ -176,12 +201,14 @@ __Acelerómetro, LED, Audio__
 
 [http://processing.org/](http://processing.org/)
 
+
 +++
 
 ### Open Kinect for Processing
 ![Open Kinect for Processing](assets/images/openkinect.jpg)  
 
 https://github.com/shiffman/OpenKinect-for-Processing
+
 
 +++
 
@@ -194,6 +221,7 @@ Librería: https://github.com/wexstorm/simple-openni
 
 Driver: https://structure.io/openni _(Sólo windows y linux)_
 
+
 +++
 
 ### Kinect v2 for Processing
@@ -204,11 +232,12 @@ Se basa en el SDK oficial de Microsoft.
 Necesita correr en Windows.
 
 
+
 ---
 
-## CODE   
+## CODE 1   
 
-<small style="color:gray;">Basics</small>
+<span style="color:gray;">Basics</span>
 
 +++
 
@@ -293,9 +322,10 @@ PImage img = kinect.getVideoImage();
 
 ---
 
-## CODE  
+## CODE 2  
 
-<small style="color:gray;">Tracking</small>
+<span style="color:gray;">Tracking</span>
+
 
 +++
 
@@ -321,30 +351,76 @@ for (int x=0; x<img.width; x++) {
 }
 ```
 
+
 +++
 
 ### Average Point Tracking
+
+#### promedioX = sumaDeValores / cantidadPuntos  
+
 ```java
-// Setup
-size(640, 480, P3D); // Usar el render en P3d
-kinect.initDepth();
-// Draw
-int[] data = kinect.getRawDepth();
+// Draw (todos los frames)
+int cantidadPuntos = 0;
+int sumaDeValores = 0;
+float promedio = 0;
+
+// para todos los puntos
 for (int x=0; x<img.width; x++) {
     for (int y=0; y<img.height; y++) {
-        // p = profundidad del punto (x,y)
         int p = x + y * img.width;
-        int valor = data[p];
+        int d = data[p];
+        // si está en el rango de tracking
+        if( d < threshold ){
+            // sumar posicion X del punto
+            sumaDeValores += x;
+            // incrementar contador
+            cantidadPuntos++;
+        }
     }
 }
+
+// calcular promedio
+promedioX = sumaDeValores / cantidadPuntos;
 ```
+
+
 +++
 
 ### Pixel Record Tracking
 
+#### Ej.: El punto más alto  
+
+```java
+// Draw
+int record = 480;
+
+// para todos los puntos
+for (int x=0; x<img.width; x++) {
+    for (int y=0; y<img.height; y++) {
+        int p = x + y * img.width;
+        int d = data[p];
+        // si está en el rango de tracking
+        if( d < threshold ){
+            // si Y es más alta, actualizar record
+            if( y < record ){
+                record = y;
+            }
+        }
+    }
+}
+```
+
+
 +++
 
 ### Blob Tracking
+
+![Imagen](assets/images/blobdetection.png)  
+
+#### Processing: blobDetection  
+
+#### OFx: ofxOpenCv  
+
 
 +++
 
@@ -355,18 +431,21 @@ for (int x=0; x<img.width; x++) {
 [https://github.com/enauman/CANKinectPhysics](https://github.com/enauman/CANKinectPhysics)
 
 
+
 ---
 
-## CODE  
+## CODE 3  
 
-<small style="color:gray;">Skeleton</small>
+<span style="color:gray;">Skeleton</span>
+
 
 +++
 
-<small style="color:gray;">Interfaz Natural de Usuario (NUI)</small>  
+<span style="color:gray;">Interfaz Natural de Usuario (NUI)</span>  
 
 Se interactúa con una aplicación mediante movimientos gestuales del cuerpo o de alguna de sus partes como las manos.
 También existe el control de sistemas operativos por medio de la voz humana, denominado control por reconocimiento del habla o reconocimiento de voz, como por ejemplo Siri, Google Now u OK Google.
+
 
 +++
 
@@ -378,6 +457,7 @@ También existe el control de sistemas operativos por medio de la voz humana, de
 
 ### Skeleton
 ![Kinect componentes](assets/images/kinect-skeleton.png)  
+
 
 +++
 
@@ -415,7 +495,7 @@ Puerto OSC: 12345 y 12347
 
 ## OSC  
 
-<small style="color:gray;">Open Sound Control</small>  
+<span style="color:gray;">Open Sound Control</span> 
 
 Protocolo de comunicación para compartir información, por red y en tiempo real, entre aplicaciones y dispositivos.  
 
@@ -454,6 +534,9 @@ void oscEvent(OscMessage elMensaje) {
 
 [Documentación](https://resolume.com/manual/es/r4/controlling#open_sound_control_osc)
 
+### [Synapse](http://synapsekinect.tumblr.com/post/6305020721/download)
+### Kinect + Isadora
+### Kinect + Arduino
 
 
 ---
@@ -474,7 +557,7 @@ void oscEvent(OscMessage elMensaje) {
 
 ## CASOS  
 
-<small style="color:gray;">Parte 1</small>
+<span style="color:gray;">Parte 1</span>
 
 +++
 
@@ -549,7 +632,7 @@ void oscEvent(OscMessage elMensaje) {
 ---
 
 ## CASOS  
-<small style="color:gray;">Parte 2</small>
+<span style="color:gray;">Parte 2</span>
 
 +++
 
@@ -604,7 +687,7 @@ void oscEvent(OscMessage elMensaje) {
 ---
 
 ## CASOS  
-<small style="color:gray;">Parte 3</small>
+<span style="color:gray;">Parte 3</span>
 
 
 +++
@@ -671,7 +754,7 @@ void oscEvent(OscMessage elMensaje) {
 ---
 
 ## CASOS  
-<small style="color:gray;">Parte 4</small>
+<span style="color:gray;">Parte 4</span>
 
 +++
 
@@ -709,17 +792,18 @@ void oscEvent(OscMessage elMensaje) {
 ## Bonus  
 
 ### [TSPS](http://www.tsps.cc/)
-### [Synapse](http://synapsekinect.tumblr.com/post/6305020721/download)
-### Kinect + Isadora
-### Kinect + Arduino
+### Tracker Class (v1)
 ### Syphon/Spout
 
 ---
 
 ## Bibliografía
+
 - Making things see
 - Hacking the kinect
 - Learning Processing Shiffman
+- The nature of code
+
 
 ---
 
