@@ -59,7 +59,7 @@
 
 - Esqueleto **(articulaciones)**
 - Motion Capture **(testing)**
-- Synapse **(win/mac)**
+- Synapse **(win/osx)**
 - Distancia entre dos **"Joints"**
 - Kinect SDK (win)
 
@@ -73,6 +73,7 @@
     - Isadora
     - Arduino
 - Múltiples kinects
+- Calibrar con proyector
 
 +++
 
@@ -133,7 +134,7 @@ Envía data a **30 FPS** con una resolución de **640x480** para el RGB y **320x
 
 - Modelos compatibles: 1414 y 1473 __(este último trae algunos bugs)__
 - Necesita un adaptador especial
-- Se puede usar con Win, Mac y Linux
+- Se puede usar con Windows, OSx y Linux
 - USB 2.0
 
 
@@ -157,7 +158,7 @@ Trae una imagen __"Registered"__ que alinea la camara RGB con la D.
 ![Kinect adaptador v2](assets/images/adaptador-v2-alt.jpg)  
 
 - Necesita un adaptador **MUY** especial __(no hay genéricos)__
-- Se puede usar con Win8+ __(W8 64 bit)__ y Mac __(OSx >= 10.9; sin análisis de imagen)__
+- Se puede usar con Windows __(>=8, 64 bit)__ y OSx __(>= 10.9; sin análisis de imagen)__
 - USB 3.0
 
 
@@ -181,6 +182,7 @@ __Acelerómetro, LED, Audio__
 ##### v2: [https://github.com/OpenKinect/libfreenect2](https://github.com/OpenKinect/libfreenect2)
 ##### Guía: https://openkinect.org/wiki/Getting_Started
 </small>
+
 
 +++
 
@@ -268,6 +270,9 @@ kinect.enableMirror(true); // para espejar
 PImage img = kinect.getVideoImage();
 ```
 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/rgbImage)  
+
+
 +++
 
 ### <span style="color:#562F99">2.</span> Imagen infrarroja
@@ -278,6 +283,9 @@ kinect.enableIR(true);
 // Draw
 PImage img = kinect.getVideoImage();
 ```
+
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/irImage)  
+
 
 +++
 
@@ -290,6 +298,9 @@ kinect.enableColorDepth(true); // si queremos mapa de color
 PImage img = kinect.getDepthImage();
 ```
 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/depthImage)  
+
+
 +++
 
 ### <span style="color:#562F99">4.</span> Nube de puntos
@@ -300,6 +311,9 @@ kinect.initDepth();
 // Draw
 PImage img = kinect.getVideoImage();
 ```
+
+[Código de ejemplo (D. Shiffman)](https://github.com/colormono/kinect-notes/tree/master/code/pointCloud)  
+
 
 +++
 
@@ -351,6 +365,8 @@ for (int x=0; x<img.width; x++) {
 }
 ```
 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/depthImageRaw)  
+
 
 +++
 
@@ -383,6 +399,10 @@ for (int x=0; x<img.width; x++) {
 promedioX = sumaDeValores / cantidadPuntos;
 ```
 
+Códigos de ejemplo: [X](https://github.com/colormono/kinect-notes/tree/master/code/averagePointTrackingX), 
+[Y](https://github.com/colormono/kinect-notes/tree/master/code/averagePointTrackingY), 
+[XY](https://github.com/colormono/kinect-notes/tree/master/code/averagePointTrackingXY)  
+
 
 +++
 
@@ -410,6 +430,8 @@ for (int x=0; x<img.width; x++) {
 }
 ```
 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/highestPointTracking)  
+
 
 +++
 
@@ -417,9 +439,7 @@ for (int x=0; x<img.width; x++) {
 
 ![Imagen](assets/images/blobdetection.png)  
 
-#### Processing: blobDetection  
-
-#### OFx: ofxOpenCv  
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/blobTracking)  
 
 
 +++
@@ -458,6 +478,8 @@ También existe el control de sistemas operativos por medio de la voz humana, de
 ### Skeleton
 ![Kinect componentes](assets/images/kinect-skeleton.png)  
 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/SynapseReceiver)  
+
 
 +++
 
@@ -469,10 +491,21 @@ También existe el control de sistemas operativos por medio de la voz humana, de
 
 +++
 
+### Kinect SDK  
+
+![Kinect SDK](assets/images/kinect-sdk.png)  
+
+[https://developer.microsoft.com/en-us/windows/kinect](https://developer.microsoft.com/en-us/windows/kinect)  
+
+
++++
+
 ### Distancia entre dos Joints
 
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/distanceMeasurement.mp4" type="video/mp4"></video><br> -->
 ![Video](https://www.youtube.com/embed/CScdZrYSr3I)  
+
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/SynapseReceiver2)  
 
 
 +++
@@ -482,18 +515,18 @@ También existe el control de sistemas operativos por medio de la voz humana, de
 
 [http://synapsekinect.tumblr.com/](http://synapsekinect.tumblr.com/)  
 
-Puerto OSC: 12345 y 12347
+__Puertos OSC:__ 12345 y 12347  
 
-
-+++
-
-### Kinect SDK
-![Kinect componentes](assets/images/skeleton.png)  
 
 
 ---
 
-## OSC  
+## CODE 4 - <span style="color:gray;">Communication</span>  
+
+
++++
+
+### OSC  
 
 <span style="color:gray;">Open Sound Control</span> 
 
@@ -503,22 +536,27 @@ Es "el sucesor del MIDI" porque ofrece un control mucho más preciso y una incre
 
 [http://opensoundcontrol.org/](http://http://opensoundcontrol.org/)
 
+
 +++
 
-### Librería para ENVIAR y RECIBIR mensajes
+### oscP5: Librería para ENVIAR y RECIBIR mensajes
 
 ```java
-import oscP5.*;
-import netP5.*;
+// importar liberías
+import oscP5.*; // Recibir
+import netP5.*; // Enviar
+
 // SETUP
 oscP5 = new OscP5(this, 9000); // Escuchar: Puerto 9000
 miServidor = new NetAddress("192.168.1.112", 12345); // Enviar: IP, Puerto
+
 // Enviar mensajes
 void mousePressed() {
   OscMessage miMensaje = new OscMessage("/md8key/ctrl_layer_media/1");
   miMensaje.add( 8 );
   oscP5.send(miMensaje, miServidor);
 }
+
 // Recibir mensajes
 void oscEvent(OscMessage elMensaje) {
     println("pattern: "+elMensaje);
@@ -528,45 +566,105 @@ void oscEvent(OscMessage elMensaje) {
 
 +++
 
-### Resolume
+#### Resolume  
 
 ![OpenFrameworks](assets/images/resolume-osc.png)  
 
-[Documentación](https://resolume.com/manual/es/r4/controlling#open_sound_control_osc)
+[Documentación](https://resolume.com/manual/es/r4/controlling#open_sound_control_osc), 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/oscResolumeKinect)  
 
-### [Synapse](http://synapsekinect.tumblr.com/post/6305020721/download)
-### Kinect + Isadora
-### Kinect + Arduino
+
++++
+
+#### Isadora  
+
+
++++
+
+#### Arduino  
+
+
++++
+
+### Múltiples kinects  
+
+
++++
+
+### Calibrar con proyector  
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/calibrarMapping.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/84658886)
+
+<span style="color: #562F99">Kinect Projector Toolkit</span>
+
+<span style="color: #AADC69">[Toolkit](https://github.com/genekogan/KinectProjectorToolkit) - [Tutorial](https://vimeo.com/84658886)</span>  
+
 
 
 ---
 
-## OpenFrameworks
+## OpenFrameworks  
+
 ![OpenFrameworks](assets/images/of-logo.png)  
 
-[http://openframeworks.cc/](http://openframeworks.cc/)
+[http://openframeworks.cc/](http://openframeworks.cc/)  
+
 
 +++
 
 ![ofxKinect](assets/images/ofxKinect.jpg)  
 
-1. ofxKinect
+[ofxKinect](https://github.com/colormono/kinect-notes/tree/master/code/of-kinectExample)
+
+
++++
+
+![ofxOpenCV](assets/images/ofxOpenCV.png)  
+
+[ofxOpenCV](link_source)
+
+
++++
+
+![ofxOsc](assets/images/ofxOsc.jpg)  
+
+[ofxOsc](link_source)
+
 
 
 ---
 
-## CASOS  
+## CASOS - <span style="color:gray;">Parte 1</span>  
 
-<span style="color:gray;">Parte 1</span>
 
 +++
 
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/mechanical-mirrors.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/101408845)  
+![Dazzling](assets/images/dazzling-ir.jpg)  
 
-<span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span>  
+<span style="color: #562F99">[Kinect’s Dazzling Infrared Lights Disco](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)</span>  
 
-<span style="color: #AADC69">Análisis de profundidad</span>  
+<span style="color: #AADC69">Fotografía de patrones IR</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/radiohead.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/8nTFjVm9sTQ)  
+
+<span style="color: #562F99">"House of Cards" (Radiohead) - Aaron Koblin</span>  
+
+<span style="color: #AADC69">Point Cloud</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/musica.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/82414802)  
+
+<span style="color: #562F99">"Música" (Tan Biónica) - QUALE Studio</span>  
+
+<span style="color: #AADC69">Point Cloud | RGBd</span>  
 
 
 +++
@@ -581,39 +679,20 @@ void oscEvent(OscMessage elMensaje) {
 
 +++
 
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/musica.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/82414802)  
-
-<span style="color: #562F99">Música (Tan Biónica) - QUALE Studio</span>  
-
-<span style="color: #AADC69">Point Cloud | RGBD</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/phantom.mp4" type="video/mp4"></video><br> -->
-![Video](https://www.youtube.com/embed/HFpou6izBQg)  
-
-<span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span>  
-
-<span style="color: #AADC69">Point Cloud | RGBD</span>  
-
-
-+++
-
-![Dazzling](assets/images/dazzling-ir.jpg)  
-
-<span style="color: #562F99">[Kinect’s Dazzling Infrared Lights Disco](http://mymodernmet.com/audrey-penven-dancing-with-invisible-light/)</span>  
-
-<span style="color: #AADC69">Fotografía de patrones IR</span>  
-
-
-+++
-
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/nikefuel_station.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/44338220)  
 
-<span style="color: #562F99">Nike Fuel Station | Onformative</span>  
+<span style="color: #562F99">Nike Fuel Station - Onformative</span>  
+
+<span style="color: #AADC69">Análisis de profundidad</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/mechanical-mirrors.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/101408845)  
+
+<span style="color: #562F99">Mechanical Mirrors - Daniel Rozin</span>  
 
 <span style="color: #AADC69">Análisis de profundidad</span>  
 
@@ -628,18 +707,28 @@ void oscEvent(OscMessage elMensaje) {
 <span style="color: #AADC69">Análisis de profundidad</span>  
 
 
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/phantom.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/HFpou6izBQg)  
+
+<span style="color: #562F99">Phantom (Scars) - Julius Tuomisto & Janne Karhu</span>  
+
+<span style="color: #AADC69">Point Cloud | RGBD</span>  
+
+
 
 ---
 
-## CASOS  
-<span style="color:gray;">Parte 2</span>
+## CASOS - <span style="color:gray;">Parte 2</span>  
+
 
 +++
 
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/quantum-120944206.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/120944206)  
 
-<span style="color: #562F99">Quantum Space | Kuflex</span>  
+<span style="color: #562F99">Quantum Space - Kuflex</span>  
 
 <span style="color: #AADC69">Análisis de RAW Data</span>  
 
@@ -649,7 +738,7 @@ void oscEvent(OscMessage elMensaje) {
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/34533540-lozano.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/107092350)  
 
-<span style="color: #562F99">Locomoción | QUALE Studio</span>  
+<span style="color: #562F99">Locomoción - QUALE Studio</span>  
 
 <span style="color: #AADC69">Average Point Tracking</span>  
 
@@ -659,7 +748,7 @@ void oscEvent(OscMessage elMensaje) {
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/34533540-lozano.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/34533540)  
 
-<span style="color: #562F99">Tape Recorders | Rafael Lozano-Hemmer</span>  
+<span style="color: #562F99">Tape Recorders - Rafael Lozano-Hemmer</span>  
 
 <span style="color: #AADC69">Average Point Tracking</span>  
 
@@ -669,9 +758,9 @@ void oscEvent(OscMessage elMensaje) {
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/firewall_640x360.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/54882144)  
 
-<span style="color: #562F99">Firewall | Aaron Sherwood & Michael Allison</span>  
+<span style="color: #562F99">Firewall - Aaron Sherwood & Michael Allison</span>  
 
-<span style="color: #AADC69">Blob detection | OSC</span>  
+<span style="color: #AADC69">Blob detection, OSC</span>  
 
 
 +++
@@ -679,15 +768,150 @@ void oscEvent(OscMessage elMensaje) {
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/derivations.mp4" type="video/mp4"></video><br> -->
 ![Video](https://player.vimeo.com/video/209096035)  
 
-<span style="color: #562F99">Derivations | Raven Kwok</span>  
+<span style="color: #562F99">Derivations - Raven Kwok</span>  
 
 <span style="color: #AADC69">Blob Detection</span>  
 
 
 ---
 
-## CASOS  
-<span style="color:gray;">Parte 3</span>
+## CASOS - <span style="color:gray;">Parte 3</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/AndroidifyTSE.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/126631920)  
+
+<span style="color: #562F99">Androidify Times Square Experience - Google</span>  
+
+<span style="color: #AADC69">Esqueleto</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/50229394.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/50229394)  
+
+<span style="color: #562F99">The Treachery of Sanctuary - Chris Milk</span>  
+
+<span style="color: #AADC69">Esqueleto, Blob</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/PuppetParade.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/34824490)
+
+<span style="color: #562F99">Puppet Parade - I/O Design</span>  
+
+<span style="color: #AADC69">Esqueleto, Blobs, Gestos</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/17180651)
+
+<span style="color: #562F99">DepthJS - Fluid Interfaces</span>  
+
+<span style="color: #AADC69">Gestos</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/43756177)
+
+<span style="color: #562F99">SPRING - SUGOI Inc</span>  
+
+<span style="color: #AADC69">Gestos</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/AirGuitar.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/8DmOux4IdAE)  
+
+<span style="color: #562F99">AirGuitar - Chris O'Shea</span>  
+
+<span style="color: #AADC69">Gestos</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/AirGuitarWarrior.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/1sQYxOqGsxM)  
+
+<span style="color: #562F99">Air Guitar Warrior</span>  
+
+<span style="color: #AADC69">Gestos / Game</span>  
+
+
+
+---
+
+## CASOS - <span style="color:gray;">Parte 4</span>
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/rozin-trolls.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/ck_soI_Agy8)  
+
+<span style="color: #562F99">Trolls Mirror - Daniel Rozin</span>  
+
+<span style="color: #AADC69">Análisis de profundidad</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_1280x640.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/38874664)
+
+<span style="color: #562F99">Unnamed SoundSculpture - onformative</span>
+
+<span style="color: #AADC69">RAW Data, Multiples Kinect</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_(docu)_1280x640.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/38850289)
+
+<span style="color: #562F99">Unnamed SoundSculpture - onformative</span>
+
+<span style="color: #AADC69">RAW Data, Multiples Kinect</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/RainRoom.mp4" type="video/mp4"></video>  -->
+![Video](https://www.youtube.com/embed/EkvazIZx-F0)  
+
+<span style="color: #562F99">Barbican's Rain Room</span>  
+
+<span style="color: #AADC69">Raw DATA, Análisis de profundidad</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/the_v_motion_project.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/45417241)  
+
+<span style="color: #562F99">The V Motion Project - Colenso BBDO</span>  
+
+<span style="color: #AADC69">Esqueleto, Blob, OSC</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/apparition.mp4" type="video/mp4"></video><br> -->
+![Video](https://www.youtube.com/embed/-wVq41Bi2yE)  
+
+<span style="color: #562F99">Apparition - laus Obermaier & Ars Electronica Futurelab</span>  
+
+<span style="color: #AADC69">Mapping Callibration</span>  
 
 
 +++
@@ -700,100 +924,31 @@ void oscEvent(OscMessage elMensaje) {
 <span style="color: #AADC69">Varias técnicas</span>  
 
 
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/AndroidifyTSE.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/126631920)  
-
-<span style="color: #562F99">Androidify Times Square Experience | Google</span>  
-
-<span style="color: #AADC69">Esqueleto</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/50229394.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/50229394)  
-
-<span style="color: #562F99">The Treachery of Sanctuary | Chris Milk</span>  
-
-<span style="color: #AADC69">Esqueleto</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/PuppetParade.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/34824490)
-
-<span style="color: #562F99">Puppet Parade | I/O Design</span>  
-
-<span style="color: #AADC69">Esqueleto / Blobs</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/17180651)
-
-<span style="color: #562F99">DepthJS | Fluid Interfaces</span>  
-
-<span style="color: #AADC69">Gestos</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/DepthJS.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/43756177)
-
-<span style="color: #562F99">SPRING | SUGOI Inc</span>  
-
-<span style="color: #AADC69">Gestos</span>  
-
-
-
----
-
-## CASOS  
-<span style="color:gray;">Parte 4</span>
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_1280x640.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/38874664)
-
-<span style="color: #562F99">Unnamed SoundSculpture | onformative</span>
-
-<span style="color: #AADC69">RAW Data | Multiples Kinect</span>  
-
-
-+++
-
-<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_(docu)_1280x640.mp4" type="video/mp4"></video><br> -->
-![Video](https://player.vimeo.com/video/38850289)
-
-<span style="color: #562F99">Unnamed SoundSculpture | onformative</span>
-
-<span style="color: #AADC69">RAW Data | Multiples Kinect</span>  
-
-
-+++
-
-<video width="640" height="480" controls><source src="./assets/md/assets/videos/ar-sandbox.mp4" type="video/mp4"></video>  
-
-![Video](https://www.youtube.com/embed/j9JXtTj0mzE)  
-
-<span style="color: #562F99">Augmented Reality Sandboxr</span>  
-
-<span style="color: #AADC69">Raw DATA, Análisis de profundidad</span>  
-
 
 ---
 
 ## Bonus  
 
-### [TSPS](http://www.tsps.cc/)
-### Tracker Class (v1)
-### Syphon/Spout
+
++++
+
+### [TSPS](http://www.tsps.cc/)  
+
+
++++
+
+### Tracker Class (v1)  
+
+
++++
+
+### Syphon/Spout  
+
+Sirve para compartir video entre aplicaciones utilizando [FreeFrame](http://freeframe.sourceforge.net/).
+
+[Syphon (OSx)](http://syphon.v002.info/) | [Spout (WIN)](http://spout.zeal.co/)  
+
+
 
 ---
 
@@ -805,6 +960,7 @@ void oscEvent(OscMessage elMensaje) {
 - The nature of code
 
 
+
 ---
 
 ## Gracias
@@ -814,6 +970,7 @@ Mariano Rivas
 <span style="color: gray">colormono@gmail.com</span>  
 
 <span style="color: gray">https://github.com/colormono/kinect-notes</span>
+
 
 +++
 
