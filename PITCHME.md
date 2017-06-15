@@ -77,6 +77,10 @@
 
 +++
 
+### Montaje
+
++++
+
 ### Casos
 
 +++
@@ -491,6 +495,26 @@ También existe el control de sistemas operativos por medio de la voz humana, de
 
 +++
 
+### SimpleOpenNi
+
+![Kinect SDK](assets/images/simpleOpenNi.png)  
+
+Para correr necesita Processing 2.2.1 **(no es compatible con otras versiones)**  
+
+**Processing 2.2.1:** 
+[Win 32](http://download.processing.org/processing-2.2.1-windows32.zip), 
+[Win 64](http://download.processing.org/processing-2.2.1-windows64.zip), 
+[Mac OS x](http://download.processing.org/processing-2.2.1-macosx.zip)
+
+**Librería para Processing:** 
+[SimpleOpenNi con soporte para 1473](http://troikatronix.com/files/SimpleOpenNI_1.96_osx_kinect_1473.zip)  
+
+**Sketch:** 
+[Código de ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/simpleOpenNiUser)  
+
+
++++
+
 ### Kinect SDK  
 
 ![Kinect SDK](assets/images/kinect-sdk.png)  
@@ -578,15 +602,32 @@ void oscEvent(OscMessage elMensaje) {
 
 #### Isadora  
 
+![Isadora](assets/images/isadora-osc.png)  
+
+**Tutorial:** 
+[Parte 1](https://support.troikatronix.com/support/solutions/articles/13000014928-isadora-kinect-tracking-tutorial-part-1),  
+[Parte 2](https://troikatronix.freshdesk.com/support/solutions/articles/13000014929-isadora-kinect-tracking-tutorial-part-2),  
+[Parte 3](https://troikatronix.freshdesk.com/support/solutions/articles/13000014930-isadora-kinect-tracking-tutorial-part-3), 
+[Video](https://www.youtube.com/watch?v=0HY5U6QSyhM)  
+
+
 
 +++
 
 #### Arduino  
 
+![Arduino](assets/images/arduino-kinect.jpg)  
+
+**Enlaces:** 
+[Arduino](https://www.arduino.cc/), 
+[Código de Ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/arduinoFirmataKinect)  
+
 
 +++
 
 ### Múltiples kinects  
+
+[Código de Ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/multipleKinect)  
 
 
 +++
@@ -598,7 +639,9 @@ void oscEvent(OscMessage elMensaje) {
 
 <span style="color: #562F99">Kinect Projector Toolkit</span>
 
-<span style="color: #AADC69">[Toolkit](https://github.com/genekogan/KinectProjectorToolkit) - [Tutorial](https://vimeo.com/84658886)</span>  
+[Toolkit v1](https://github.com/genekogan/KinectProjectorToolkit), 
+[Toolkit v2](https://github.com/bradenneufeld/K2P3Toolkit), 
+[Tutorial](https://vimeo.com/84658886)  
 
 
 
@@ -630,6 +673,47 @@ void oscEvent(OscMessage elMensaje) {
 ![ofxOsc](assets/images/ofxOsc.jpg)  
 
 [ofxOsc](link_source)
+
+
+
+---
+
+## Montaje  
+
+
++++
+
+![Case Study: UD Interactive Wall](assets/images/UniversityOfDaytonInteractiveWall.png)  
+
+[Case Study: UD Interactive Wall](http://www.flightphase.com/case-studies/ud-interactive-wall)  
+
+
++++
+
+![Pisto](assets/images/montaje2.png)  
+
+Cuando se usan prolongadores USB tienen que ser activos.  
+
+
++++
+
+![Adaptador](assets/images/IMG_0904_preview_featured.jpg)  
+
+[Adaptador para Imprimir en 3D](https://www.thingiverse.com/thing:27510)  
+
+
++++
+
+![Adaptador](assets/images/kinect-mount-09_display_large_preview_featured.jpg)  
+
+[Adaptador para Imprimir en 3D](https://www.thingiverse.com/thing:6930)  
+
+
++++
+
+![Adaptador](assets/images/IMG_20120106_221652_display_large_preview_featured.jpg)  
+
+[Adaptador para Imprimir en 3D](https://www.thingiverse.com/thing:15638)  
 
 
 
@@ -886,6 +970,16 @@ void oscEvent(OscMessage elMensaje) {
 
 +++
 
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/35458411.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/35458411)
+
+<span style="color: #562F99">University of Dayton Interactive Wall - Flightphase</span>
+
+<span style="color: #AADC69">RAW Data, Multiples Kinect</span>  
+
+
++++
+
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/RainRoom.mp4" type="video/mp4"></video>  -->
 ![Video](https://www.youtube.com/embed/EkvazIZx-F0)  
 
@@ -929,24 +1023,27 @@ void oscEvent(OscMessage elMensaje) {
 
 ## Bonus  
 
-
-+++
-
-### [TSPS](http://www.tsps.cc/)  
-
-
-+++
-
-### Tracker Class (v1)  
-
-
 +++
 
 ### Syphon/Spout  
 
 Sirve para compartir video entre aplicaciones utilizando [FreeFrame](http://freeframe.sourceforge.net/).
 
-[Syphon (OSx)](http://syphon.v002.info/) | [Spout (WIN)](http://spout.zeal.co/)  
+[Syphon (OS x)](http://syphon.v002.info/) | [Spout (Win)](http://spout.zeal.co/)  
+
+
++++
+
+### TSPS
+
+![TSPS](assets/images/tsps.jpg)  
+
+TSPS es una plataforma para sensar gente en el espacio: [http://www.tsps.cc](http://www.tsps.cc/)  
+
+
++++
+
+### Tracker Class (v1)  
 
 
 
