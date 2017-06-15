@@ -948,6 +948,27 @@ Cuando se usan prolongadores USB tienen que ser activos.
 <span style="color: #AADC69">Análisis de profundidad</span>  
 
 
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/207140893.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/207140893)
+
+<span style="color: #562F99">Mimic - Design I/O</span>  
+
+<span style="color: #AADC69">Análisis de profundidad</span>  
+
+
++++
+
+<!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/207185635.mp4" type="video/mp4"></video><br> -->
+![Video](https://player.vimeo.com/video/207185635)
+
+<span style="color: #562F99">Mimic (Behind the scenes) - Design I/O</span>  
+
+<span style="color: #AADC69">Análisis de profundidad</span>  
+
+
 +++
 
 <!-- <video width="640" height="480" controls><source src="./assets/md/assets/videos/unnamed_soundsculpture_1280x640.mp4" type="video/mp4"></video><br> -->
@@ -1043,7 +1064,9 @@ TSPS es una plataforma para sensar gente en el espacio: [http://www.tsps.cc](htt
 
 +++
 
-### Tracker Class (v1)  
+### Tracker Class  
+
+[Código de Ejemplo](https://github.com/colormono/kinect-notes/tree/master/code/tracker)  
 
 
 
@@ -1051,10 +1074,10 @@ TSPS es una plataforma para sensar gente en el espacio: [http://www.tsps.cc](htt
 
 ## Bibliografía
 
-- Making things see
-- Hacking the kinect
-- Learning Processing Shiffman
-- The nature of code
+- "Making things see", Greg Borenstein, 2012. [Link](http://makingthingssee.com/)
+- "Hacking the kinect", Kramer J. Parker, 2012. [Link](http://www.apress.com/us/book/9781430238676)
+- "Learning Processing", Daniel Shiffman, 2008. [Link](http://learningprocessing.com/)
+- "The nature of code", Daniel Shiffman, 2012. [Link](http://natureofcode.com/)
 
 
 
