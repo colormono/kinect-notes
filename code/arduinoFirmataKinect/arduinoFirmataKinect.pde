@@ -16,9 +16,9 @@ void setup() {
   for (int i=0; i<Arduino.list().length; i++) {
     println(i +": "+ Arduino.list()[i] );
   } 
-  arduino = new Arduino(this, Arduino.list()[5], 57600);
+  arduino = new Arduino(this, Arduino.list()[2], 57600);
 
-  // Configurar puertos
+  // Configurar puertos (4 y 7, por ejemplo)
   arduino.pinMode(4, Arduino.SERVO);
   arduino.pinMode(7, Arduino.SERVO);
   

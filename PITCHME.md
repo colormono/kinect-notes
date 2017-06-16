@@ -545,7 +545,9 @@ __Puertos OSC:__ 12345 y 12347
 
 ---
 
-## CODE 4 - <span style="color:gray;">Communication</span>  
+## CODE 4  
+
+<span style="color:gray;">Communication</span>  
 
 
 +++
